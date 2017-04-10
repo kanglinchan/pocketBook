@@ -1,14 +1,14 @@
 [
     {
         "title": "英文",
-        "uri": "categorys/english/"
+        "url": "categorys/english/introduction.json"
     },
     {
         "title": "编程",
-        "uri": "categorys/program/"
+        "url": "categorys/program/introduction.json"
     },
     {
         "title": "其他",
-        "uri": "categorys/other/"
+        "url": "categorys/other/introduction.json"
     }
 ]
