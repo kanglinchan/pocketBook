@@ -1,14 +1,14 @@
-[
-    {
+{
+    "english":{
         "title": "英文",
         "url": "categorys/english/introduction.json"
     },
-    {
+    "program":{
         "title": "编程",
         "url": "categorys/program/introduction.json"
     },
-    {
+    "other":{
         "title": "其他",
         "url": "categorys/other/introduction.json"
     }
-]
+}
