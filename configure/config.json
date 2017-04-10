@@ -1,7 +1,20 @@
-{
-    "cotegorys":[
-        {"english":"fffff"},
-        {"program":"ffff2222"},
-        {"other":"444444444"}
-    ]
-}
+[
+    {
+        "english": {
+            "title": "英文",
+            "uri": "categorys/english/"
+        }
+    },
+    {
+        "program": {
+            "title": "编程",
+            "uri": "categorys/program/"
+        }
+    },
+    {
+        "other": {
+            "title": "其他",
+            "uri": "categorys/other/"
+        }
+    }
+]
