@@ -1,17 +1,17 @@
 [
     {
         "title": "英文",
-        "key": "english",
+        "category": "english",
         "url": "categorys/english/introduction.json"
     },
     {
         "title": "编程",
-        "key": "program",
+        "category": "program",
         "url": "categorys/program/introduction.json"
     },
     {
         "title": "其他",
-        "key": "other",
+        "category": "other",
         "url": "categorys/other/introduction.json"
     }
 ]
