@@ -1,18 +1,6 @@
 [
     {
         "name":"第一章",
-        "section_url":"https://kanglinchan.github.io/pocketBook/categorys/english/grammar/001.md"
-    },
-    {
-        "name":"第二章",
-        "section_url":"https://kanglinchan.github.io/pocketBook/categorys/english/grammar/002.md"
-    },
-    {
-        "name":"第三章",
-        "section_url":"https://kanglinchan.github.io/pocketBook/categorys/english/grammar/003.md"
-    },
-    {
-        "name":"第四章",
-        "section_url":"https://kanglinchan.github.io/pocketBook/categorys/english/grammar/004.md"
+        "section_url":"001.md"
     }
 ]
