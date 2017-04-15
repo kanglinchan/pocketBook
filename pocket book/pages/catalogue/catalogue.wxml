@@ -1,0 +1,14 @@
+<!--/pages/catalogue/catalogue.wxml-->
+<view class="page">
+    <view class="page__bd">
+<view class="weui-cells__title">章节目录</view>
+        <view class="weui-cells weui-cells_after-title">
+        <block wx:for="{{sectionList}}" wx:key="section_name">
+            <navigator  url="/pages/article/article?category={{category}}&bookName={{bookName}}&index={{index}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">{{item.section_name}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">进入</view>
+            </navigator>
+            </block>
+        </view>
+    </view>
+</view>

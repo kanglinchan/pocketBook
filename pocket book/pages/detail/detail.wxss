@@ -1,0 +1,84 @@
+/* pages/detail/detail.wxss */
+
+
+view.section{
+    background-color:white;
+    height: 400rpx;
+    padding: 40rpx 30rpx;
+    border-bottom: 1rpx solid #D9D9D9;
+}
+
+view.section view.book-attr{
+    display: flex;
+}
+
+
+view.section image.book-cover{
+    width: 210rpx;
+    height: 297rpx;
+    flex:0 0 210rpx;
+}
+
+view.section view.aside{
+    flex: 1 0 0;
+    padding:0 30rpx;
+    
+}
+
+view.section view.aside view.book-name{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    color:#2a8cff;
+    font-size: 48rpx;
+    padding-bottom:10rpx;
+}
+
+view.section view.aside view.book-author{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    color: #2a8cff;
+    font-size: 36rpx;
+    padding-bottom:40rpx;
+}
+
+view.section view.aside text.book-status{
+    padding: 8rpx;
+    background-color: #ad8c57;
+    border-radius: 6rpx;
+    font-size: 28rpx;
+    color: white;
+    word-spacing: 10rpx;
+}
+
+view.section view.btn{
+    display: flex;
+    margin: 40rpx 0;
+}
+
+view.section view.btn button{
+    flex-grow: 1;
+}
+
+view.section view.btn button.collect{
+    margin-right: 20rpx;
+    background: transparent;
+    border: 1px solid #2a8cff;
+    color: #2a8cff;
+}
+view.section view.btn button.read{
+    margin-left: 20rpx;
+    background-color: #2a8cff;
+    color: #fff;
+}
+
+
+view.catalogue-btn{
+    margin: 20rpx 0;
+}
+
+.other-button-hover{
+    background-color: #2a8c99
+}
+

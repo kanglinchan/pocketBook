@@ -1,0 +1,46 @@
+/* pages/user/user.wxss */
+
+
+
+view.user-info{
+    background-color:white;
+    padding: 40rpx 40rpx;
+    display: flex;
+    border-bottom:1rpx solid #D9D9D9;
+}
+
+image.user-face{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    flex-basis: 80rpx;
+    flex-shrink: 0;
+}
+
+/*view.user-aside{
+    flex-grow: 1;
+    padding: 0 30rpx;
+    color: white;
+}*/
+
+view.user-aside view.user-name{
+    flex-grow: 1;
+    font-size: 48rpx;
+    margin-bottom: 10rpx;
+    line-height: 80rpx;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 30rpx;
+    vertical-align: middle;
+}
+
+/*view.user-aside view.user-description{
+    font-size: 30rpx;
+    line-height: 1.5em;
+    max-height: 90rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #d4e8ff;
+    
+}*/

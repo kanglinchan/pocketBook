@@ -1,0 +1,40 @@
+
+<import src="../../assets/lib/wxParse/wxParse.wxml"/> 
+
+
+<view class="page" bindtap="switchConfigureBar">
+    <scroll-view class="content" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+        <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:section.nodes}}"/>
+        </view> 
+        <view class="page__bd">
+            <view class="weui-loadmore" wx:if="{{ 'loading'== stauts }}">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">正在加载</view>
+            </view>
+            <view class="weui-loadmore weui-loadmore_line"  wx:if="{{'end' == stauts }}">
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+            </view>
+        </view>
+
+        <view class="configur-bar" catchtap="collectHandle" animation="{{animationData}}">
+            <view class="configur-item">
+                <navigator url="/pages/catalogue/catalogue?category={{category}}&bookName={{bookName}}"  hover-class="className">
+                    <image src="../../assets/images/catalogue.png" />
+                    <view >目录</view>
+                </navigator>
+            </view>
+            <view class="configur-item">
+                <navigator url="/pages/detail/detail?category={{category}}&bookName={{bookName}}"  hover-class="className">
+                    <image src="../../assets/images/detail.png" />
+                    <view>详情</view>
+                </navigator>
+            </view>
+            <view class="configur-item">
+                <image data-tag="collect" src="../../assets/images/{{ collected ? 'collect-active':'collect' }}.png" />
+                <view>收藏</view>
+            </view>
+        </view>
+
+    </scroll-view>
+</view>

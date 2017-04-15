@@ -1,0 +1,36 @@
+/* pages/home/home.wxss */
+
+
+view.grid-container{
+    box-sizing: border-box;
+    margin:30rpx 20rpx 0;
+    overflow: hidden;
+}
+
+view.grid-container view.grid-item{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    padding-bottom: 30rpx;
+}
+
+view.grid-container view.grid-item image{
+    width: 210rpx;
+    height: 297rpx;
+}
+
+view.grid-container view.grid-item view.grid-title{
+    margin:0 20rpx ;
+    font-size: 30rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #8e8e8e;
+}
+
+
+.item-navigator-hover{
+    filter: contrast(.7);
+}
+
+

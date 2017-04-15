@@ -1,0 +1,26 @@
+<view class="page" >
+    <view class="page__bd">
+        <view class="grid-container" >
+
+            <view class="grid-item" 
+                wx:for="{{ library }}"  
+                catchtouchend="endHandle"
+                catchtouchstart="startHandle"
+                wx:key="{{unique_key}}"
+                data-key="{{item.category}}-{{item.bookName}}"
+                id="{{index}}"
+                data-url="/pages/article/article?category={{item.category}}&bookName={{item.bookName}}" 
+                hover-class="item-navigator-hover">
+                    <image mode="aspectFill" src="{{item.coverUrl}}" />
+                    <view class="grid-title">{{ item.bookName }}</view>
+            </view>
+
+             <view class="grid-item" bindtap="toFind"  hover-class="item-navigator-hover">
+                     <image mode="aspectFill" src="../../assets/images/increament.png" />
+                    <view class="grid-title"></view>
+            </view>
+
+
+        </view>
+    </view>
+</view>

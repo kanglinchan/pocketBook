@@ -1,0 +1,67 @@
+<!--pages/user/user.wxml-->
+<view class="page">
+    <view class="user-info">
+            <image class="user-face" src="{{userInfo.avatarUrl}}"></image>
+            <view class="user-name">{{userInfo.nickName}}</view>
+       </view>
+
+    <view class="page__bd">
+
+         <view class="weui-cells__title">收藏</view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="/pages/collect/collect" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../assets/images/collect-active.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">数量</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{count}}</view>
+            </navigator>
+        </view>
+
+
+
+
+
+        <view class="weui-cells__title">个人信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view  class="weui-cell">
+                <view class="weui-cell__bd">国家</view>
+                <view class="weui-cell__ft">{{ userInfo.country }}</view>
+            </view>
+            <view  class="weui-cell">
+                <view class="weui-cell__bd">省份</view>
+                <view class="weui-cell__ft">{{ userInfo.province }}</view>
+            </view>
+            <view  class="weui-cell">
+                <view class="weui-cell__bd">城市</view>
+                <view class="weui-cell__ft">{{ userInfo.city }}</view>
+            </view>
+            <view  class="weui-cell">
+                <view class="weui-cell__bd">性别</view>
+                <view class="weui-cell__ft">{{ userInfo.gender }}</view>
+            </view>
+            <view  class="weui-cell">
+                <view class="weui-cell__bd">语言</view>
+                <view class="weui-cell__ft">{{ userInfo.language }}</view>
+            </view>
+        </view>
+
+        <!--<view class="weui-cells__title">带图标、说明、跳转的列表项</view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">cell standard</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">cell standard</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+            </navigator>
+        </view>-->
+    </view>
+</view>

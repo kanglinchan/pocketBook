@@ -1,0 +1,44 @@
+<!--pages/detail/detail.wxml-->
+<view class="page">
+<view class="page__bd">
+    <view class="section">
+        <view class="book-attr">
+            <image class="book-cover" src="{{image}}"></image>
+            <view class="aside">
+                <view class="book-name">{{bookInfo.bookName}}</view>
+                <view class="book-author">作者:{{bookInfo.author}}</view>
+                <text class="book-status">{{bookInfo.status}}</text>
+            </view>
+        </view>
+        <view class="btn">
+            <button bindtap="toArticle" size="mini" class="collect" hover-class="other-button-hover">查看</button>
+            <button bindtap="saveBook" size="mini"  class="read" hover-class="other-button-hover">放入书架</button>
+        </view>
+    </view>
+
+<navigator url="/pages/catalogue/catalogue?category={{category}}&bookName={{bookName}}" hover-class="weui-cell_active">
+    <view class="weui-cells weui-cells_after-title catalogue-btn" >
+            <view class="weui-cell">
+                <view class="weui-cell__bd">目录章节</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">查看</view>
+            </view>
+    </view>
+</navigator>
+
+    <view class="page-bd">
+       <view class="weui-panel">
+            <view class="weui-panel__hd">小书简介</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">{{bookInfo.bookName}}</view>
+                    <view class="weui-media-box__desc">{{bookInfo.description}}</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">日期</view>
+                        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{bookInfo.time}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

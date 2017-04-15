@@ -1,0 +1,111 @@
+
+<import src="template.wxml"/>
+<view class="page">
+    <view class="page__bd">
+
+       <!-- <scroll-view class="banner-container">
+            <view class="banner-item-1">
+                <image src="http://onub28of2.bkt.clouddn.com/banner1.png"></image>
+            </view>
+            <view class="banner-item-2">
+                <image src="http://onub28of2.bkt.clouddn.com/banner-2.png"></image>
+            </view>
+            <view class="banner-item-3">
+                <image src="http://onub28of2.bkt.clouddn.com/banner3.png"></image>
+            </view>
+        </scroll-view>-->
+        <template is="banner-swiper"/>
+
+        <view class="search">
+            <input bindfocus="toSearch" type="text" placeholder-class="search-placeholer"  placeholder="书名、作者关键字" />
+        </view>
+
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="title">
+                    <view id="{{index}}"  class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item.title}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+<!-- url="/pages/detail/detail?bookName={{item.bookName}}&cover={{item.cover}}&description={{item.description}}&time={{item.time}}&status={{item.status}}&author={{item.author}}&category={{tabs[activeIndex].category}}"-->
+            <!--内容-->
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">书本列表</view>
+                        <view class="weui-panel__bd">
+                                <navigator
+                                    wx:for="{{cacheData[activeIndex]}}"
+                                    wx:key="{{bookName}}"
+                                    url="/pages/detail/detail?bookName={{item.bookName}}&category={{tabs[activeIndex].category}}" 
+                                    class="weui-media-box weui-media-box_appmsg" 
+                                    hover-class="weui-cell_active"
+                                >
+                                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                        <image class="weui-media-box__thumb" src="{{CATEGORYS_URL}}/{{tabs[activeIndex].category}}/{{item.bookName}}/thumb.jpg" />
+                                    </view>
+                                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                        <view class="weui-media-box__title">{{item.bookName}}</view>
+                                        <view class="weui-media-box__desc">{{item.description}}</view>
+                                    </view>
+                                </navigator>
+                        </view>
+                    </view>
+
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">书本列表</view>
+                        <view class="weui-panel__bd">
+                                <navigator
+                                    wx:for="{{cacheData[activeIndex]}}"
+                                    wx:key="{{bookName}}"
+                                    url="/pages/detail/detail?bookName={{item.bookName}}&category={{tabs[activeIndex].category}}" 
+                                    class="weui-media-box weui-media-box_appmsg" 
+                                    hover-class="weui-cell_active"
+                                >
+                                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                        <image class="weui-media-box__thumb" src="{{CATEGORYS_URL}}/{{tabs[activeIndex].category}}/{{item.bookName}}/thumb.jpg" />
+                                    </view>
+                                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                        <view class="weui-media-box__title">{{item.bookName}}</view>
+                                        <view class="weui-media-box__desc">{{item.description}}</view>
+                                    </view>
+                                </navigator>
+                        </view>
+                    </view>                
+                
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">书本列表</view>
+                        <view class="weui-panel__bd">
+                                <navigator
+                                    wx:for="{{cacheData[activeIndex]}}"
+                                    wx:key="{{bookName}}"
+                                    url="/pages/detail/detail?bookName={{item.bookName}}&category={{tabs[activeIndex].category}}" 
+                                    class="weui-media-box weui-media-box_appmsg" 
+                                    hover-class="weui-cell_active"
+                                >
+                                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                        <image class="weui-media-box__thumb" src="{{CATEGORYS_URL}}/{{tabs[activeIndex].category}}/{{item.bookName}}/thumb.jpg" />
+                                    </view>
+                                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                        <view class="weui-media-box__title">{{item.bookName}}</view>
+                                        <view class="weui-media-box__desc">{{item.description}}</view>
+                                    </view>
+                                </navigator>
+                        </view>
+                    </view>
+                
+                </view>
+            </view>
+        </view>
+
+    </view>
+</view>
